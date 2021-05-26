@@ -27,18 +27,6 @@ You will need Leiningen installed.
 
 * `populate`: Right now this is the only command and it will copy data from the db into json.
 
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
 ## License
 
 Copyright © 2021 MIT
