@@ -15,6 +15,8 @@
   [^String s]
   (s/replace s #"^~" (System/getProperty "user.home")))
 
+;; @note If you have multiple profiles we DON'T CARE! Just kidding, we do care
+;; but supporting that is not high priority.
 (def base-path (expanduser "~/Library/Application Support/Google/Chrome/Default/databases/"))
 
 (comment

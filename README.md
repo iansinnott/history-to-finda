@@ -1,20 +1,31 @@
 # history-to-finda
 
-FIXME: description
+If you use the Chrome History Unlimited browser plugin you will have a database on your computer containing all your browser history. ALL OF IT. All browsers I know of (Chrome, FF, etc) limit the amount of browser history to roughly 3 months. This is a travesty, because often the sites you most want to visit are ones you've already visited at some point in the past.
+
+The aforementioned browsser plugin stores all your history in a sqlite database. This is great, but how do you search that history? You can search it via the extension's built-in UI, but I wanted something not tied to the browser at all.
+
+This simple Clojure script will grab your history from that database and dump it into a JSON file which can be read by Finda.
+
+NB: This is thus far coded for my personal use, so there may be hardcoded paths which are not applicable on your system.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Clone this repo.
 
 ## Usage
 
-FIXME: explanation
+From within the repo, run:
 
-    $ java -jar history-to-finda-0.1.0-standalone.jar [args]
+```
+lein install
+lein run -- populate
+```
+
+You will need Leiningen installed.
 
 ## Options
 
-FIXME: listing of options this app accepts.
+* `populate`: Right now this is the only command and it will copy data from the db into json.
 
 ## Examples
 
@@ -30,15 +41,4 @@ FIXME: listing of options this app accepts.
 
 ## License
 
-Copyright © 2021 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+Copyright © 2021 MIT
